@@ -1,1 +1,1 @@
-https://vir45.github.io/Codejam-Canvas/cv
+https://vir45.github.io/CodejamCanvas-cv/cv
