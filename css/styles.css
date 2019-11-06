@@ -83,6 +83,7 @@ main {
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
+    /* too many numbers after the . */
     color: rgba(0, 0, 0, 0.541327);
     cursor: pointer;
 }
@@ -110,6 +111,8 @@ main {
 .action button img {
     margin-right: 30px;
 }
+
+/* use classes for styling but not id*/
 
 #current p,
 #previous p,
