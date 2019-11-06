@@ -6,6 +6,7 @@ let map = [
 ];
 
 function draw(map) {
+    // if the variable is permanent then use const instead of let
     let pixel = document.getElementById('pixel');
     let ctx = pixel.getContext('2d');
     let x = 0;
