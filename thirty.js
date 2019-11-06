@@ -1,10 +1,15 @@
+// Please, not to use draw1 .. draw2 methods names
 function draw1(map) {
+    // if the variable is permanent then use const instead of let
     let pixel = document.getElementById('pixel');
+    // the same
     let ctx = pixel.getContext('2d');
     let x = 0;
     let y = 0;
     for (let i = 0; i < map.length; i++) {
         for (let j = 0; j < map[i].length; j++) {
+            // you can use templates string here
+            // `rgba(${map[i][j][0]},${map[i][j][1]},${map[i][j][2]})`
             ctx.fillStyle = 'rgba(' + map[i][j][0] + ',' + map[i][j][1] + ',' + map[i][j][2] + ')';
             ctx.fillRect(x, y, 16, 16);
 
@@ -18,6 +23,28 @@ function draw1(map) {
     }
 };
 
+/*
+The same is here
+
+function draw1(map) {
+    let pixel = document.getElementById('pixel');
+    let ctx = pixel.getContext('2d');
+
+    const width = pixel.width;
+    const heigth = pixel.height;
+
+    const xStep = width / map[0].length;
+    const yStep = heigth / map.length;
+
+    for (let i = 0; i < map.length; i++) {
+        for (let j = 0; j < map[i].length; j++) {
+            ctx.fillStyle = 'rgba(' + map[i][j][0] + ',' + map[i][j][1] + ',' + map[i][j][2] + ')';
+            ctx.fillRect(xStep * j, yStep * i, xStep, yStep);
+        }
+    }
+};
+
+*/
 
 let map1 = [
     [
