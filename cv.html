@@ -19,12 +19,14 @@
             <div class="style">
                 <div class="action">
                     <button id="bucket"><img src="./image/bucket.svg" alt="bucket">Paint bucket</button>
+                    <!-- Plaese use english words for file names --> 
                     <button id="choose-color"><img src="./image/pipetka.svg" alt="pipetka">Choose color</button>
                     <button id="move"><img src="./image/movie.svg" alt="movie">Move</button>
                     <button id="transform"><img src="./image/transform.svg" alt="transform">Transform</button>
                 </div>
                 <div class="color">
                     <button id="current">
+                        <!-- Don't use block elements inside of inline elements, use <span> --> 
                         <p></p>Current color
                     </button>
                     <button id="previous">
@@ -42,6 +44,7 @@
                 <canvas width="512" height="512" id="pixel"></canvas>
             </div>
             <div class="control">
+                <!-- id includes russian letter --> 
                 <button id="foгr">
                     <p></p>4x4
                 </button>
