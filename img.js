@@ -1,4 +1,5 @@
 function draw3() {
+    // Please, use const
     let pixel = document.getElementById('pixel');
     let ctx = pixel.getContext('2d');
     let img = new Image();
