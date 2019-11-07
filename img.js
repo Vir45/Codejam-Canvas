@@ -8,7 +8,6 @@ function drawCanvasImage() {
         ctx.drawImage(img, 0, 0, width, height);
     };
     img.src = "./image/image.png";
-
 }
 
 document.getElementById('five-hundred-twelve').addEventListener('click', () => {
