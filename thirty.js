@@ -1,19 +1,15 @@
 function drawCanvasThirtyTwo(map) {
     const pixel = document.getElementById('pixel');
     const ctx = pixel.getContext('2d');
-    let x = 0;
-    let y = 0;
+    const width = pixel.width;
+    const height = pixel.height;
+    const xStep = width / map[0].length;
+    const yStep = height / map.length;
     for (let i = 0; i < map.length; i++) {
         for (let j = 0; j < map[i].length; j++) {
-            ctx.fillStyle = `rgba(${map[i][j][0]},${map[i][j][1]},${map[i][j][2]})`;
-            ctx.fillRect(x, y, 16, 16);
 
-            if (x < 496) {
-                x += 16;
-            } else {
-                x = 0;
-                y += 16;
-            }
+            ctx.fillStyle = `rgba(${map[i][j][0]},${map[i][j][1]},${map[i][j][2]})`;
+            ctx.fillRect(xStep * i, yStep * j, xStep, yStep);
         }
     }
 };
@@ -6233,5 +6229,6 @@ const canvasThirtyTwo = [
 
 
 document.getElementById('thirty-two').addEventListener('click', () => {
+
     drawCanvasThirtyTwo(canvasThirtyTwo);
 });
