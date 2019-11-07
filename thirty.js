@@ -1,11 +1,11 @@
-function draw1(map) {
-    let pixel = document.getElementById('pixel');
-    let ctx = pixel.getContext('2d');
+function drawCanvasThirtyTwo(map) {
+    const pixel = document.getElementById('pixel');
+    const ctx = pixel.getContext('2d');
     let x = 0;
     let y = 0;
     for (let i = 0; i < map.length; i++) {
         for (let j = 0; j < map[i].length; j++) {
-            ctx.fillStyle = 'rgba(' + map[i][j][0] + ',' + map[i][j][1] + ',' + map[i][j][2] + ')';
+            ctx.fillStyle = `rgba(${map[i][j][0]},${map[i][j][1]},${map[i][j][2]})`;
             ctx.fillRect(x, y, 16, 16);
 
             if (x < 496) {
@@ -19,7 +19,7 @@ function draw1(map) {
 };
 
 
-let map1 = [
+const canvasThirtyTwo = [
     [
         [
             255,
@@ -6233,5 +6233,5 @@ let map1 = [
 
 
 document.getElementById('thirty-two').addEventListener('click', () => {
-    draw1(map1);
+    drawCanvasThirtyTwo(canvasThirtyTwo);
 });

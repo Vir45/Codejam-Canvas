@@ -83,22 +83,15 @@ main {
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-    color: rgba(0, 0, 0, 0.541327);
+    color: rgba(0, 0, 0, 0.54);
     cursor: pointer;
 }
 
-#bucket,
-#move,
-#transform,
-#current,
-#blue {
+.large-button {
     height: 65px;
 }
 
-#choose-color,
-#move,
-#previous,
-#red {
+.small-button {
     height: 58px;
 }
 
@@ -111,10 +104,7 @@ main {
     margin-right: 30px;
 }
 
-#current p,
-#previous p,
-#red p,
-#blue p {
+.color button span {
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -125,15 +115,15 @@ main {
     box-sizing: border-box;
 }
 
-#previous p {
+#previous span {
     background: #41F795;
 }
 
-#red p {
+#red span {
     background: #F74141;
 }
 
-#blue p {
+#blue span {
     background: #41B6F7;
 }
 
@@ -146,7 +136,7 @@ main {
     height: 70px;
 }
 
-.control button p {
+.control button span {
     display: inline-block;
     width: 20px;
     height: 20px;

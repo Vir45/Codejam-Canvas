@@ -1,13 +1,13 @@
-let map = [
+const canvasFour = [
     ['00BCD4', 'FFEB3B', 'FFEB3B', '00BCD4'],
     ['FFEB3B', 'FFC107', 'FFC107', 'FFEB3B'],
     ['FFEB3B', 'FFC107', 'FFC107', 'FFEB3B'],
     ['00BCD4', 'FFEB3B', 'FFEB3B', '00BCD4']
 ];
 
-function draw(map) {
-    let pixel = document.getElementById('pixel');
-    let ctx = pixel.getContext('2d');
+function drawCanvasFour(map) {
+    const pixel = document.getElementById('pixel');
+    const ctx = pixel.getContext('2d');
     let x = 0;
     let y = 0;
     for (let i = 0; i < map.length; i++) {
@@ -24,6 +24,6 @@ function draw(map) {
     }
 }
 
-document.getElementById('foгr').addEventListener('click', () => {
-    draw(map);
+document.getElementById('forr').addEventListener('click', () => {
+    drawCanvasFour(canvasFour);
 });
